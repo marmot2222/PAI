@@ -134,3 +134,5 @@ function obliczStatystyki(array $liczby): array
     ];
 }
 ?>
+
+// test
