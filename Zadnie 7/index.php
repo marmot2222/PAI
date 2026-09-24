@@ -9,13 +9,13 @@
     echo "<br>";
     echo multiplyNumbers(2,3);
     echo "<br>";
-    echo zamienNaWielkie("gracjan gej");
+    echo zamienNaWielkie("");
     echo "<br>";
     echo czyPierwsza(7);
     echo "<br>";
     echo czyPierwsza(10);
     echo "<br>";
-    echo czyJestPrzediale(1, 20);
+    echo czyJestPrzediale(1, 21);
     echo "<br>";
     echo ObliczStatystykiSuma($array, $array2);
 
@@ -70,7 +70,7 @@
     ];
 
 // praca domowa
-    function obliczSume(array $liczby): int|float
+    function suma(array $liczby): int|float
 {
     $suma = 0;
 
@@ -81,19 +81,19 @@
     return $suma;
 }
 
-function obliczSrednia(array $liczby): float
+function srednia(array $liczby): float
 {
     if (count($liczby) === 0) {
-        throw new InvalidArgumentException('Tablica nie może być pusta.');
+        throw new InvalidArgumentException('tablica nie może być pusta');
     }
 
-    return obliczSume($liczby) / count($liczby);
+    return suma($liczby) / count($liczby);
 }
 
-function obliczMin(array $liczby): int|float
+function min(array $liczby): int|float
 {
     if (count($liczby) === 0) {
-        throw new InvalidArgumentException('Tablica nie może być pusta.');
+        throw new InvalidArgumentException('Ttablica nie może być pusta');
     }
 
     $najmniejsza = $liczby[0];
@@ -107,10 +107,10 @@ function obliczMin(array $liczby): int|float
     return $najmniejsza;
 }
 
-function obliczMax(array $liczby): int|float
+function max(array $liczby): int|float
 {
     if (count($liczby) === 0) {
-        throw new InvalidArgumentException('Tablica nie może być pusta.');
+        throw new InvalidArgumentException('tablica nie może być pusta');
     }
 
     $najwieksza = $liczby[0];
@@ -124,7 +124,7 @@ function obliczMax(array $liczby): int|float
     return $najwieksza;
 }
 
-function obliczStatystyki(array $liczby): array
+function statystyki(array $liczby): array
 {
     return [
         'suma' => obliczSume($liczby),
