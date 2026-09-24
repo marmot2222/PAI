@@ -69,7 +69,7 @@
         1, 2, 3, 4, 5
     ];
 
-
+// praca domowa
     function obliczSume(array $liczby): int|float
 {
     $suma = 0;

@@ -1,30 +1,33 @@
 <?php 
-    // $array = [1, 2, 3, 4, 5];
+    $array = [1, 2, 3, 4, 5];
 
     // $index_to_remove = 2;
 
     // unset($array[$index_to_remove]); //usuwanie elementu z tablicy
     // var_dump($array);
 
-    // $a = 0;
+//     $a = 0;
+// echo "<br>";
 
+//     for($i = 0; $i < count($array); $i++){
+        
+//         $a = $array[$i];
+//     }
+//     // var_dump($array);
+//     echo $a;
 
-    // for($i = 0; $i < count($array); $i++){
-    //     $array[$i] = $a;
-    // }
-    // var_dump($array);
-
-    echo "<h1>Tablice dwuwymiarowe</h1>";
+    // echo "<h1>Tablice dwuwymiarowe</h1>";
     
     // $array2D = [
     //     [1, 2, 3],
     //     [4, 5, 6],
-    //     [7, 8, 9]
+    //     [7, 8, 9],
+    //     [10, 11, 12]
     // ];
 
     // echo "<br>";
 
-    // echo $array2D[0][0];
+    // echo $array2D[2][0];
 
     // echo "<br>";
 
@@ -36,31 +39,31 @@
     //     echo "<br>";
     // }
 
-    echo "<br>";
+    // echo "<br>";
 
-    $osoby = [
-        ["imie" => "Jan", "wiek" => 25],
-        ["imie" => "Anna", "wiek" => 30],
-        ["imie" => "Piotr", "wiek" => 35]
-    ];
+    // $osoby = [
+    //     ["imie" => "Jan", "wiek" => 25],
+    //     ["imie" => "Anna", "wiek" => 30],
+    //     ["imie" => "Piotr", "wiek" => 35]
+    // ];
 
-    foreach($osoby as $wiersz){
-        foreach($wiersz as $element){
-            echo $element . " ";
-        }
-        echo "<br>";
-    }
+    // foreach($osoby as $wiersz){
+    //     foreach($wiersz as $element){
+    //         echo $element . " ";
+    //     }
+    //     echo "<br>";
+    // }
 
-    echo "<br>";
+    // echo "<br>";
 
-    for($i = 0; $i < count($osoby); $i++){
-        foreach($osoby[$i] as $element){
-            echo $element . " ";
-        }
-        echo "<br>";
-    }
+    // for($i = 0; $i < count($osoby); $i++){
+    //     foreach($osoby[$i] as $element){
+    //         echo $element . " ";
+    //     }
+    //     echo "<br>";
+    // }
 
-    echo "<br>";
+    // echo "<br>";
 
     //Zadanie :
 
@@ -73,58 +76,62 @@
 
     //Diagonalna = przekątna
     //Za pomocą dwóch pętli for dodać na diagonalnych wartość 0
-    for($i = 0; $i < count($array4x4); $i++){
-        for($j = 0; $j < count($array4x4[$i]); $j++){
-            if($i === $j){
-                $array4x4[$i][$j] = 0;
+    // for($i = 0; $i < count($array4x4); $i++){
+    //     for($j = 0; $j < count($array4x4[$i]); $j++){
+    //         if($i === $j){
+    //             $array4x4[$i][$j] = 0;
                 
-            }
-        }
-    }
+    //         }
+    //     }
+    // }
 
-    printArray($array4x4);
+    //  printArray($array4x4);
     
-    function printArray($array4x4){
-        for($i = 0; $i < count($array4x4); $i++){
-            for($j = 0; $j < count($array4x4[$i]); $j++){
-                echo $array4x4[$i][$j] . " ";
-            }
-            echo "<br>";
-        }
-    }
+    // function printArray($array4x4){
+    //     for($i = 0; $i < count($array4x4); $i++){
+    //         for($j = 0; $j < count($array4x4[$i]); $j++){
+    //             echo $array4x4[$i][$j] . " ";
+    //         }
+    //         echo "<br>";
+    //     }
+    // }
+
 
     //Zadanie 2 
     //Summuj wszystkie elementy w tablicy 2 wymiarowej array4x4
 
-    echo "<br>";
+    // echo "<br>";
 
     
     
-        $sum = 0;
-        for($i = 0; $i < count($array4x4); $i++){
-            for($j = 0; $j < count($array4x4[$i]); $j++){
-                $sum += $array4x4[$i][$j];
-            }
+    //     $sum = 0;
+    //     for($i = 0; $i < count($array4x4); $i++){
+    //         for($j = 0; $j < count($array4x4[$i]); $j++){
+    //             $sum += $array4x4[$i][$j];
+    //         }
            
-        }
+    //     }
     
 
-    echo $sum;
+    // echo $sum;
 
-    echo "<br>";
-     echo "<br>";
-      echo "<br>";
+    // echo "<br>";
+    //  echo "<br>";
+    //   echo "<br>";
 
     //Zadanie 3
-    //Summuj wszywstkie wartość w każdej kolumnie tablicy 2 wymiarowej array4x4 i wypisz to w nowej
-        $suma = 0;
-        for($i = 0; $i < count($array4x4); $i++){
-            for($j = 0; $j < count($array4x4[$i]); $j++){
-                if($array4x4[$i][$j] === $array4x4[$i][0]){
-                    $suma += $array4x4[$i][$j];
-                }
-            }
-            echo $suma . "<br>";
-        }
+    //Summuj wszywstkie wartość w każdej kolumnie tablicy 2 wymiarowej array4x4 i wypisz to w nowej tablicy
+        
+//         for ($i = 0; $i < 4; $i++) {
+//     $suma = 0;
+
+//     for ($j = 0; $j < 4; $j++) {
+//         $suma += $array4x4[$j][$i];
+        
+//     }
+
+    
+//     print_r($suma);
+// }
 
 ?>
