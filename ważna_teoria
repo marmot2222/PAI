@@ -1,0 +1,28 @@
+Architektura RESTfull API
+
+mamy dwie tabele uczeń i oceny relacja 1:W /   synonimy zasób , entity, encja
+
+1. SELECT * STUDENT;
+2. Wysyłać zapytanie do BD (np. PHP)
+3. dowolna manipulacja danych
+4. Zwrócenie danych 
+
+
+Create Student(student){   Metody HTTP POST(dodawanie)
+                  ^
+                  |
+                Obiekt
+                   
+
+}
+
+showStudent(){}  GET(pobieranie)
+
+updateStudent(student){}  PUT/PATCH(aktualizuje dane(nadpisuje))
+
+deleteStudent(id_stud){...} DELETE(usuwa)
+
+
+API jest
+REZSTANOWE
+STATELES
