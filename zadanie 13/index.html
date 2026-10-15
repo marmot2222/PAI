@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hello">Witaj na mojej stronie</h1>
+
+    <button id="send" onclick="send()">Wyślij</button>
+
+    <hr>
+
+    <form>
+        <label for="price">Cena</label>
+        <input type="number" id="price" name="price"> <br>
+
+        <label for="amount">ilość</label>
+        <input type="number" id="amount" name="amount"> <br>    
+        <button type="button" id="calculate" onclick="Oblicz()">Oblicz</button>
+
+        <p id="result"></p>
+    </form>
+
+    
+    <script>
+        function send(){
+            document.getElementById("hello").textContent = "udało ci się";
+        }
+
+        
+
+        function Oblicz(){
+            let price = document.getElementById("price").value;
+        let amount = document.getElementById("amount").value;
+     
+        let wynik = price * amount;
+           document.getElementById("result").textContent = wynik
+        }
+
+
+
+    </script>
+</body>
+</html>
