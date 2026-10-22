@@ -24,5 +24,6 @@
     // unset($_SESSION['login']);
     // session_destroy(); // usuwamy (niszczymy) wszystkie zmienne z sesji
     // session_unset(); // uwolnienie zmiennej spod danego klucza
-
+    // Jeśli sesja nie istenieje - session_start tworzy nową
+    // Jeśli sesja istnieje - session_start dołącza do istniejącej
 ?>
