@@ -1,0 +1,103 @@
+.container {
+    display: grid;
+    grid-template-columns:20% 30% 25% 25% ;
+    grid-template-areas: "header header header header"
+    "nav main main aside"
+    "footer footer footer footer" ;
+    background-color: lightyellow;
+    gap: 10px;
+}
+
+.header {
+    grid-area: header;
+    background-color: red;
+    height: 100px;
+}
+
+.h1 {
+color: lightgoldenrodyellow;
+
+
+}
+.header-p {
+color: lightgoldenrodyellow;
+text-align: right;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: blue;
+    height: 520px;
+}
+
+.main {
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "section1 section2 section3"
+    "section4 section5 section6";
+    background-color: lightcyan;
+    height: 500px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.main-p {
+
+}
+
+.section1 {
+    grid-area: section1;
+    background-color: lightgray;
+    height: 150px;
+    margin-top: 120px;
+    border-radius: 10px 10px;
+}
+.section2 {
+    grid-area: section2;
+    background-color: lightgray;
+    height: 150px;
+    margin-top: 120px;
+    border-radius: 10px 10px;
+}
+.section3 {
+    grid-area: section3;
+    background-color: lightgray;
+    height: 150px;
+    margin-top: 120px;
+    border-radius: 10px 10px;
+}
+.section4 {
+    grid-area: section4;
+    background-color: lightgray;
+    height: 150px;
+    margin-top: 10px;
+    border-radius: 10px 10px;
+}
+.section5 {
+    grid-area: section5;
+    background-color: lightgray;
+    height: 150px;
+    margin-top: 10px;
+    border-radius: 10px 10px;
+}
+.section6 {
+    grid-area: section6;
+    background-color: lightgray;
+    height: 150px;
+    margin-top: 10px;
+    border-radius: 10px 10px;
+}
+
+
+.aside {
+    grid-area: aside;
+    background-color: lime;
+     height: 520px;
+}
+.footer {
+    grid-area: footer;
+    background-color: lightsalmon;
+     height: 100px;
+     text-align: center;
+}
