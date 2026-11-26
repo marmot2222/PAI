@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse; /* usunie luk między ramkami */
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd; /* ramka komórki */
+            padding: 8px; /* odstęp wewnątrz komórki */
+            text-align: left; /* wyrównanie tekstu */
+        }
+
+        th {
+            background-color: #f2f2f2; /* tło nagłówków */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+ <input type="number" id="n">
+ <button id="button">Generuj</button>
+ <div id="tabela"></div>
+
+
+<script>
+function wypisz(arr2D, p) {
+    // Walidacja parametrów
+    if (!Array.isArray(arr2D) || !arr2D.every(row => Array.isArray(row))) {
+        console.error("arr2D musi być tablicą dwuwymiarową");
+        return;
+    }
+    if (!(p instanceof HTMLElement)) {
+        console.error("p musi być elementem HTML");
+        return;
+    }
+
+    // Tworzenie tabeli
+    let t = document.createElement("table");
+    p.appendChild(t);
+
+    // Iteracja po wierszach
+    for (let j = 0; j < arr2D.length; j++) {
+        let w = document.createElement("tr");
+        t.appendChild(w);
+
+        // Iteracja po kolumnach w danym wierszu
+        for (let k = 0; k < arr2D[j].length; k++) {
+            let c = document.createElement("td");
+            w.appendChild(c);
+            c.textContent = arr2D[j][k] !== undefined ? arr2D[j][k] : "";
+        }
+    }
+}
+
+document.getElementById("button").addEventListener("click", function() {
+    let n = Number(document.getElementById("n").value);
+    let t = [];
+    for(let i = 0; i < n; i++) {
+        t[i] = [];
+        for(let j = 0; j < n; j++) {
+            if(i==0) {
+                t[i][j] = j+1;
+            }
+            else if(j==0) {
+                t[i][j] = i+1;
+            }
+            else {
+                t[i][j] = t[0][j] * t[i][0]; 
+            }
+        }
+    }
+    console.log(t);
+    wypisz(t, document.getElementById("tabela"))
+})
+
+
+</script>
+
+
+</body>
+</html>
